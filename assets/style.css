@@ -1,0 +1,23 @@
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{animation:pg .6s both;overflow-x:hidden}
+@keyframes pg{from{opacity:0;transform:translateY(10px)}}
+svg.i{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.rv.l{transform:translateX(-34px)}.rv.r{transform:translateX(34px)}.rv.in.l,.rv.in.r{transform:none}
+.rv.in.card{transition:transform .25s,box-shadow .3s,opacity .7s}
+.gb::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:conic-gradient(from var(--a),transparent 0 55%,#1f4bd8,#ec3a55,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;animation:sp 3.2s linear infinite;pointer-events:none}
+.gb:hover::after{opacity:1}@keyframes sp{to{--a:360deg}}
+.zoom{animation:zm 22s ease-in-out infinite alternate}@keyframes zm{to{transform:scale(1.14)}}
+.mt{animation:mq 32s linear infinite}.mq:hover .mt{animation-play-state:paused}@keyframes mq{to{transform:translateX(-50%)}}
+.rot{animation:rot 26s linear infinite;transform-origin:200px 200px}.rot2{animation-duration:38s;animation-direction:reverse}
+.rot .n{animation:rot 26s linear infinite reverse;transform-box:fill-box;transform-origin:center}.rot2 .n{animation-duration:38s;animation-direction:normal}
+@keyframes rot{to{transform:rotate(360deg)}}
+.core{animation:pl 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes pl{50%{transform:scale(1.09)}}
+.fl{animation:fl 9s ease-in-out infinite alternate}@keyframes fl{to{transform:translate(30px,26px) scale(1.12)}}
+.shine::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,#ffffff88,transparent);transform:skewX(-20deg);transition:left .6s}.shine:hover::after{left:130%}
+.tr{stroke-dasharray:4 5;animation:fw 1.4s linear infinite}@keyframes fw{to{stroke-dashoffset:-18}}
+.dot{animation:ping 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3);opacity:0}}
+.wa{animation:wa 2s ease-out infinite}@keyframes wa{0%{box-shadow:0 0 0 0 #25d36688}100%{box-shadow:0 0 0 18px #25d36600}}
+.tline::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#38a3ff,#ec3a55);transition:width 2s ease}.tline.in::after{width:100%}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
